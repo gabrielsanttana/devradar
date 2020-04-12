@@ -31,7 +31,7 @@ function App() {
   return (
     <div id="container">
       <aside>
-        <strong>Cadastrar</strong>
+        <strong>Entrar</strong>
 
         <DevForm onSubmit={handleSubmit} />
       </aside>

@@ -1,7 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const socketio = require("socket.io");
 const http = require("http");
 const { setupWebSocket } = require("./websocket");
 
@@ -12,7 +11,11 @@ const app = express();
 const server = http.Server(app);
 setupWebSocket(server);
 
-mongoose.connect(`mongodb+srv://${process.env.USER}:${process.env.KEY}@cluster0-lfmbb.mongodb.net/dev-waze?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true});
+mongoose.connect(`mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@cluster0-lfmbb.mongodb.net/database_name?retryWrites=true&w=majority`, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true
+});
 
 app.use(cors());
 app.use(express.json());
