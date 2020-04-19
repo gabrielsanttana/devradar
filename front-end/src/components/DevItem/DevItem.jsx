@@ -2,7 +2,7 @@ import React from "react";
 
 import "./DevItem.css";
 
-function DevItem({ dev }) {
+function DevItem({dev}) {
   return (
     <li className="dev-item">
       <header>

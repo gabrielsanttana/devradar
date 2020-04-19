@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import { Text, View, StyleSheet } from "react-native";
+import React, {useEffect} from "react";
+import {Text, View, StyleSheet} from "react-native";
 import WebView from "react-native-webview";
 
-function Profile({ navigation }) {
+function Profile({navigation}) {
   const githubUsername = navigation.getParam("github_username");
 
   return (
-    <WebView style={styles.webview} source={{ uri: `https://github.com/${githubUsername}`}}/>
+    <WebView style={styles.webview} source={{uri: `https://github.com/${githubUsername}`}}/>
   )
 }
 

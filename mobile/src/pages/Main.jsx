@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from "react";
-import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity } from "react-native";
-import MapView, { Marker, Callout } from "react-native-maps";
-import { requestPermissionsAsync, getCurrentPositionAsync } from "expo-location";
-import { MaterialIcons } from "@expo/vector-icons";
+import React, {useState, useEffect} from "react";
+import {View, Text, StyleSheet, Image, TextInput, TouchableOpacity} from "react-native";
+import MapView, {Marker, Callout} from "react-native-maps";
+import {requestPermissionsAsync, getCurrentPositionAsync} from "expo-location";
+import {MaterialIcons} from "@expo/vector-icons";
 
 import api from "../services/api";
-import { connect, disconnect } from "../services/socket";
+import {connect, disconnect} from "../services/socket";
 
-function Main({ navigation }) {
+function Main({navigation}) {
   const [currentRegion, setCurrentRegion] = useState(null);
   const [techs, setTechs] = useState("");
   const [devs, setDevs] = useState([]);
 
   useEffect(() => {
     async function loadInitialPosition() {
-      const { granted } = await requestPermissionsAsync();
+      const {granted} = await requestPermissionsAsync();
 
       if (granted) {
-        const { coords } = await getCurrentPositionAsync({
+        const {coords} = await getCurrentPositionAsync({
           enableHighAccuracy: true
         });
 
-        const { latitude, longitude } = coords;
+        const {latitude, longitude} = coords;
 
         setCurrentRegion({
           latitude,
@@ -36,13 +36,13 @@ function Main({ navigation }) {
   }, []);
 
   function setupWebSocket() {
-    const { latitude, longitude } = currentRegion;
+    const {latitude, longitude} = currentRegion;
     
     connect(latitude, longitude, techs);
   }
 
   async function loadNearbyDevs() {
-    const { latitude, longitude } = currentRegion;
+    const {latitude, longitude} = currentRegion;
 
     const response = await api.get("/search", {
       params: {

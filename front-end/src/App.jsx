@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 
 import DevItem from "./components/DevItem/DevItem";
 import DevForm from "./components/DevForm/DevForm";

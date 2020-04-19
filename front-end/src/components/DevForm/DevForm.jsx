@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 
 import "./DevForm.css";
 
-function DevForm({ onSubmit }) {
+function DevForm({onSubmit}) {
   const [username, setUsername] = useState("");
   const [techs, setTechs] = useState("");
   const [latitude, setLatitude] = useState(0);
