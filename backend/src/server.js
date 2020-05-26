@@ -11,7 +11,7 @@ const app = express();
 const server = http.Server(app);
 setupWebSocket(server);
 
-mongoose.connect(`mongodb+srv://${process.env.MONGODB_USER}:${process.env.MONGODB_PASSWORD}@cluster0-lfmbb.mongodb.net/database_name?retryWrites=true&w=majority`, {
+mongoose.connect(`mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0-lfmbb.mongodb.net/DATABASE_NAME`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true
