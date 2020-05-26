@@ -11,7 +11,7 @@ const app = express();
 const server = http.Server(app);
 setupWebSocket(server);
 
-mongoose.connect(`mongodb+srv://...`, {
+mongoose.connect(`mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${MONGODB_CLUSTER_URL}/devradar`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true
