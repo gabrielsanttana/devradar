@@ -1,4 +1,4 @@
-## <div align="center">DevRadar <br/>📡</div>
+## <div align="center">📡 <br/> DevRadar </div>
 
 ####
 
