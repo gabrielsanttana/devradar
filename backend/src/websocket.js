@@ -8,7 +8,7 @@ exports.setupWebSocket = (server) => {
   const io = socketio(server);
 
   io.on("connection", (socket) => {
-    const { latitude, longitude, techs } = socket.handshake.query;
+    const {latitude, longitude, techs} = socket.handshake.query;
 
     connections.push({
       id: socket.id,
@@ -30,6 +30,6 @@ exports.findConnections = (coordinates, techs) => {
 
 exports.sendMessage = (to, message, data) => {
   to.forEach(connection => {
-      io.to(connection).emit(message, data);
+    io.to(connection).emit(message, data);
   });
 };

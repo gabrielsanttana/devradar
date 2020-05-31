@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const http = require("http");
-const { setupWebSocket } = require("./websocket");
+const {setupWebSocket} = require("./websocket");
 
 const routes = require("./routes");
 require("dotenv").config();
