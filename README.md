@@ -2,7 +2,7 @@
 
 <p align="center">An application that finds nearby developers working with the technologies that the user search for 📡</p>
 
-## 🛠️ Technologies:
+## 🛠️ Technologies
 
 <ul>
   <li><a href="https://nodejs.org/en/">Node.js</a></li>
@@ -15,7 +15,7 @@
   <li><a href="https://socket.io/">Socket.io</a></li>
 </ul>
 
-## ⚙️ Requirements:
+## ⚙️ Requirements
 
 <ul>
   <li><a href="https://nodejs.org/en/">Node.js</a></li>
@@ -25,7 +25,7 @@
   <li><a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas Cluster</a></li>
 </ul>
 
-## 🚀 Installation:
+## 🚀 Installation
 
 ```
 $ git clone https://github.com/gabrielsanttana/devradar
@@ -81,6 +81,6 @@ $ npm start
 <p>A new window with application log will open in the browser.</p>
 <p>Then, you can load the app by scanning the QR code with the Expo mobile app or by using the local URL.</p>
 
-## ⚖️ License:
+## ⚖️ License
 
 [MIT License](https://github.com/gabrielsanttana/devradar/blob/master/LICENSE)
