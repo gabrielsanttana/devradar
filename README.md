@@ -41,11 +41,11 @@ MONGODB_PASSWORD=your_password
 MONGODB_CLUSTER_URL=your_cluster_url
 ```
 
-```
-mongoose.connect(`mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_CLUSTER_URL}/devradar`)
-```
-
 If you prefer, just place your connection string on the server.js file.
+
+```
+mongoose.connect(`mongodb+srv...`);
+```
 
 Then:
 
