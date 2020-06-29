@@ -31,7 +31,7 @@
 $ git clone https://github.com/gabrielsanttana/devradar
 ```
 
-### 📞 API
+### 🗄️ API
 
 Before running the API, it's necessary to have a database setup on a MongoDB Atlas Cluster. After getting it, create a .env file in the project root and put these keys in environment variables and they'll work on the mongoose connection string:
 
