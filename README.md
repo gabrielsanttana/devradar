@@ -27,21 +27,23 @@
 
 ## 🚀 Installation
 
-```
+```bash
 $ git clone https://github.com/gabrielsanttana/devradar
 ```
 
 ### 🗄️ API
 
-Before running the API, it's necessary to have a database setup on a MongoDB Atlas Cluster. After getting it, create a .env file in the project root and put these keys in environment variables and they'll work on the mongoose connection string:
+Before running the API, it's necessary to have a database setup on a MongoDB Atlas Cluster. After getting it, create a .env file in the project root and put these keys in environment variables and they'll work on the mongoose connection string.
+
+Example: 
 
 ```
-MONGODB_USERNAME=your_username
-MONGODB_PASSWORD=your_password
-MONGODB_CLUSTER_URL=your_cluster_url
+MONGODB_USERNAME=username
+MONGODB_PASSWORD=123456
+MONGODB_CLUSTER_URL=cluster0-lfmbb.mongodb.net
 ```
 
-If you prefer, just place your connection string on the server.js file.
+If you prefer, you can just place your connection string on the server.js file.
 
 ```
 mongoose.connect(`mongodb+srv...`);
@@ -52,7 +54,7 @@ Then:
 ```bash
 $ cd devradar/backend
 $ npm install
-$ node src/server.js
+$ npm run dev
 ```
 
 ### 💻 Web
@@ -67,20 +69,34 @@ The application will pop-up in the browser on http://localhost:3000
 
 ### 📱 Mobile
 
-To run the mobile application, it's necessary to have an React Native Expo environment setup and the Expo mobile app installed on your smartphone.
-It's also necessary that both the smartphone and the computer are connected to the same network.
+As the web and mobile app use the same API, it's necessary to have an environment variable with the local IP address inside a `.env` file in the project root, in order to make React Native able to call the API locally:
+
+```
+LOCAL_IP_ADDRESS=ip_address
+```
+
+It's also necessary to have an React Native Expo environment setup and the Expo mobile app installed on your smartphone.
+It's important that both the smartphone and the computer are connected to the same network and to type the local IP address on the baseURL in the `api.js` file;
+
+Example:
+
+```
+const api = axios.create({
+  baseURL: 'http://000.000.00.000:3333',
+});
+```
 
 With that:
 
 ```bash
-$ npm install -g expo-cli
 $ cd devradar/mobile
+$ npm install -g expo-cli
 $ npm install
 $ npm start
 ```
 
 <p>A new window with application log will open in the browser.</p>
-<p>Then, you can load the app by scanning the QR code with the Expo mobile app or by using the local URL.</p>
+<p>Then, you can simply load the app by scanning the QR code with the Expo mobile app or by using the local URL.</p>
 
 ## ⚖️ License
 
