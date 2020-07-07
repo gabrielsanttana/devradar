@@ -33,7 +33,7 @@ $ git clone https://github.com/gabrielsanttana/devradar
 
 ### 🗄️ API
 
-Before running the API, it's necessary to have a database setup on a MongoDB Atlas Cluster. After getting it, create a .env file in the project root and put these keys in environment variables and they'll work on the mongoose connection string.
+Before running the API, it's necessary to have a database setup on a MongoDB Atlas Cluster. With that, create a `.env` file in the backend folder root and put these keys in environment variables and they'll work on the mongoose connection string. 
 
 Example: 
 
@@ -43,10 +43,18 @@ MONGODB_PASSWORD=123456
 MONGODB_CLUSTER_URL=cluster0-lfmbb.mongodb.net
 ```
 
-If you prefer, you can just place your connection string on the server.js file.
+If you prefer, you can just place your connection string on the `server.js` file.
 
 ```
 mongoose.connect(`mongodb+srv...`);
+```
+
+As the web and mobile app use the same API, it's also necessary to have an environment variable with the local IP address in order to make React Native able to call the API locally.
+
+Example:
+
+```
+LOCAL_IP_ADDRESS=000.000.00.000
 ```
 
 Then:
@@ -68,12 +76,6 @@ $ npm start
 The application will pop-up in the browser on http://localhost:3000
 
 ### 📱 Mobile
-
-As the web and mobile app use the same API, it's necessary to have an environment variable with the local IP address inside a `.env` file in the project root, in order to make React Native able to call the API locally:
-
-```
-LOCAL_IP_ADDRESS=ip_address
-```
 
 It's also necessary to have an React Native Expo environment setup and the Expo mobile app installed on your smartphone.
 It's important that both the smartphone and the computer are connected to the same network and to type the local IP address on the baseURL in the `api.js` file;
