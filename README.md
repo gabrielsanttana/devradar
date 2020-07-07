@@ -49,14 +49,6 @@ If you prefer, you can just place your connection string on the `server.js` file
 mongoose.connect(`mongodb+srv...`);
 ```
 
-As the web and mobile app use the same API, it's also necessary to have an environment variable with the local IP address in order to make React Native able to call the API locally.
-
-Example:
-
-```
-LOCAL_IP_ADDRESS=000.000.00.000
-```
-
 Then:
 
 ```bash
@@ -78,7 +70,7 @@ The application will pop-up in the browser on http://localhost:3000
 ### 📱 Mobile
 
 It's also necessary to have an React Native Expo environment setup and the Expo mobile app installed on your smartphone.
-It's important that both the smartphone and the computer are connected to the same network and to type the local IP address on the baseURL in the `api.js` file;
+It's important that both the smartphone and the computer are connected to the same network and to put the local IP address on the baseURL in the `api.js` file.
 
 Example:
 
