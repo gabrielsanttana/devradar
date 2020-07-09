@@ -4,7 +4,7 @@
 
 <img src="./assets/web_homepage.png" />
 
-<h4 align="center">An application that finds nearby developers working with the technologies that the user search for 📡</h4>
+<p align="center">An application that finds nearby developers working with the technologies that the user search for 📡</p>
 
 ## 🛠️ Technologies
 
