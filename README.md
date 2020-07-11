@@ -61,6 +61,8 @@ $ npm install
 $ npm run dev
 ```
 
+> Note: It's important to have the API running to be able to properly run the web and mobile app
+
 ### 💻 Web
 
 ```bash
